@@ -10,7 +10,7 @@ function Welcome() {
     console.log(quizState)
 
     return (
-        <div className={styles.container}>
+        <div className={styles.welcome}>
             <h2>Welcome!</h2>
             <p>Click the button below to start.</p>
             <button onClick={() => dispatch({ type: "CHANGE_STATE" })}>Start</button>
