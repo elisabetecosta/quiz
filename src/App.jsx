@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react"
 import { QuizContext } from "./contexts/quiz"
 import Welcome from "./components/Welcome/Welcome"
 import Question from "./components/Question/Question"
+import GameOver from "./components/GameOver/GameOver"
 import "./App.css"
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
 
         {/* Renders the Question component if gameStage is "Playing" */}
         {quizState.gameStage === "Playing" && <Question />}
+
+        {/* Renders the GameOver component if gameStage is "End" */}
+        {quizState.gameStage === "End" && <GameOver />}
       </div>
 
   )
