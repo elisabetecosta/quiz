@@ -1,7 +1,7 @@
 import { useContext } from "react"
-import { QuizContext } from "../../contexts/quiz"
+import { QuizContext } from "../../context/quiz"
 import Quiz from "../../img/quiz.svg"
-import styles from "./styles.module.css"
+import "./Welcome.css"
 
 function Welcome() {
 
@@ -10,10 +10,10 @@ function Welcome() {
     console.log(quizState)
 
     return (
-        <div className={styles.welcome}>
+        <div className="welcome">
             <h2>Welcome!</h2>
             <p>Click the button below to start.</p>
-            <button onClick={() => dispatch({ type: "CHANGE_STATE" })}>Start</button>
+            <button onClick={() => dispatch({ type: "CHANGE_STAGE" })}>Start</button>
             <img src={Quiz} alt="Beginning of the Quiz" />
         </div>
     )

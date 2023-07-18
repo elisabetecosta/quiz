@@ -1,7 +1,7 @@
 import { useContext } from "react"
-import { QuizContext } from "../../contexts/quiz"
+import { QuizContext } from "../../context/quiz"
 import Option from "../Option/Option"
-import styles from "./styles.module.css"
+import "./Question.css"
 
 function Question() {
 
@@ -17,10 +17,10 @@ function Question() {
     }
 
     return (
-        <div className={styles.question}>
+        <div className="question">
             <p>Question {quizState.currentQuestion + 1} of {quizState.questions.length}</p>
             <h2>{currentQuestion.question}</h2>
-            <div className={styles.optionsContainer}>
+            <div className="options-container">
                 {currentQuestion.options.map((option) => (
                     <Option
                         key={option}
